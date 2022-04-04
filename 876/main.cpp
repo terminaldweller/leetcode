@@ -19,10 +19,11 @@ public:
       heads.push_back(head);
       head = head->next;
     }
+    heads.push_back(head);
 
     int size = heads.size();
     std::cout << "size:" << size << "\n";
-    return heads[(size / 2) - ((size - 1) % 2) + 1];
+    return heads[int(size / 2)];
   }
 };
 
