@@ -6,11 +6,11 @@ from typing import List
 class Solution:
     @staticmethod
     def findAndReplacePattern(words: List[str], pattern: str) -> List[str]:
-        def match(w):
-            m1, m2 = {}, {}
+        def match(word):
+            map1, map2 = {}, {}
             return all(
-                (m1.setdefault(i, j), m2.setdefault(j, i)) == (j, i)
-                for i, j in zip(w, pattern)
+                (map1.setdefault(i, j), map2.setdefault(j, i)) == (j, i)
+                for i, j in zip(word, pattern)
             )
 
         results = []
