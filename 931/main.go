@@ -51,15 +51,13 @@ func dumpMatrix(matrix [][]int) {
 func minFallingPathSum(matrix [][]int) int {
 	for i := 1; i < len(matrix[0]); i++ {
 		for j := 0; j < len(matrix[0]); j++ {
-			// matrix[i][j] += min(matrix[i-1][j], min(matrix[i-1][max(0, j-1)], matrix[i-1][min(len(matrix[0])-1, j+1)]))
 			matrix[i][j] += min3(matrix[i-1][j], matrix[i-1][max(0, j-1)], matrix[i-1][min(len(matrix[0])-1, j+1)])
 		}
 	}
 
-	// dumpMatrix(matrix)
+	dumpMatrix(matrix)
 
 	return getRowMin(matrix[len(matrix[0])-1])
-
 }
 
 func main() {

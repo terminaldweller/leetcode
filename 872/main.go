@@ -70,5 +70,4 @@ func main() {
 	node4.Right = &node5
 
 	fmt.Println(leafSimilar(&node1, &node4))
-
 }

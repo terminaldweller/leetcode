@@ -22,7 +22,7 @@ public:
     heads.push_back(head);
 
     int size = heads.size();
-    std::cout << "size:" << size << "\n";
+    /* std::cout << "size:" << size << "\n"; */
     return heads[int(size / 2)];
   }
 };

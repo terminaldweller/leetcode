@@ -26,6 +26,7 @@ func walk(node *TreeNode, sum *int) int {
 
 	left := max(0, walk(node.Left, sum))
 	right := max(0, walk(node.Right, sum))
+	fmt.Println(left, right, sum)
 	*sum = max(*sum, left+right+node.Val)
 
 	return max(left, right) + node.Val

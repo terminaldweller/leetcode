@@ -60,7 +60,7 @@ func possibleBipartition(n int, dislikes [][]int) bool {
 			return color[u] == c
 		}
 
-		//fmt.Printf("node: %d will mark color: %d\n", u, c)
+		fmt.Printf("node: %d will mark color: %d\n", u, c)
 		color[u] = c
 		for _, v := range edges[u] {
 			if !dfs(v, -c) {
